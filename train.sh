@@ -1,0 +1,11 @@
+CUDA_VISIBLE_DEVICES=0 python3 finetune.py \
+--model_name bert-base-chinese \
+--num_labels 6 \
+--train_data_path data/clean/usual_train.txt \
+--val_data_path data/clean/usual_eval_labeled.txt \
+--batch_size 64 \
+--dataloader_num_workors 8 \
+--lr 1e-5 \
+--epochs 30 \
+--output_dir workspace/wb \
+--save_model_iter 5
