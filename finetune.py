@@ -197,7 +197,7 @@ class Trainer():
 
     def _val(self):
         self.model.eval()
-        pbar = tqdm(enumerate(self.train_dataloader), total=self.n_batch)
+        pbar = tqdm(enumerate(self.val_dataloader), total=len(self.val_dataloader))
 
         preds = []
         labels = []
